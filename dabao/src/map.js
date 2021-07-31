@@ -6,8 +6,8 @@ const getPostcode = (lat,long, setCurrentPos) => {
 
     // let postcode;
     const baseURL = "https://maps.googleapis.com/maps/api/geocode/json?latlng=";
-    // const apiKey = "&key=" + process.env.GOOGLE_MAP_API_KEY;
-    const apiKey = "&key=AIzaSyDzMoyE6vJ1ZE8TcpQeIbUSew8ShVSqmm0"
+    const apiKey = "&key=" + process.env.REACT_APP_GOOGLE_MAP_API_KEY;
+    // const apiKey = "&key=AIzaSyDzMoyE6vJ1ZE8TcpQeIbUSew8ShVSqmm0"
     const URL = `${baseURL}${lat},${long}${apiKey}`;
     
     console.log("URL",URL)

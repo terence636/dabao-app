@@ -100,13 +100,11 @@ function Row(props) {
         <TableCell align="center">{matchProps.slotsAvail}</TableCell>
         <TableCell align="center">
           {!matchProps.isConfirmedOrder && (
-            // <button disabled={plusDisabled?true:false} onClick={() => matchProps.debouncedSavePlus(match)}>
             <button disabled={plusDisabled?true:false} onClick={handlePlus}>
               +
             </button>
           )}
           {matchProps.isConfirmedOrder && (
-            // <button disabled={minusDisabled?true:false} onClick={() => matchProps.debouncedSaveMinus(match)}>
             <button disabled={minusDisabled?true:false} onClick={handleMinus}>
               -
             </button>
@@ -166,7 +164,6 @@ const CollapsibleTable = () => {
   const [matches, setMatches] = useState();
   const [toggleUpdate, settoggleUpdate] = useState(false);
 
-  // console.log("logcontext",loggedContext)
   const addrPostcode = loggedContext?.logState?.address?.postCode.toString();
   const gpsPostcode = loggedContext?.currentPos?.postcode;
 
@@ -235,8 +232,6 @@ const CollapsibleTable = () => {
       });
   };
 
-  // if (matches[0] === "loading" || loggedContext?.currentPos?.postcode === undefined) 
-  // if (matches[0] === "loading" || !gpsUpdated) 
   if(!matches || !loggedContext?.currentPos?.postcode)
     return <h1>Loading ..... </h1>;
 

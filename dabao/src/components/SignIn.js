@@ -58,6 +58,13 @@ const SignIn = () => {
       }
       );
   };
+
+  // (async () => {
+  //   let response = await fetch('/article/promise-chaining/user.json');
+  //   let user = await response.json();
+  //   ...
+  // })();
+
   return (
     <Nav>
       <h1>Login!</h1>

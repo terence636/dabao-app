@@ -37,12 +37,12 @@ const getPostcode = (lat,long, setCurrentPos) => {
 
 }
 
-const setPos = (setCurrentPos) => {
+const setPos =  async (setCurrentPos) => {
 
     const successCallback = (position) => {
       const lat = position.coords.latitude;
       const long = position.coords.longitude;
-      getPostcode(lat,long,setCurrentPos);      
+      getPostcode(lat,long,setCurrentPos);    
     }
 
     const errorCallback = (error) => {
@@ -50,6 +50,7 @@ const setPos = (setCurrentPos) => {
     }
     
     navigator.geolocation.getCurrentPosition(successCallback, errorCallback)
+  
   }
 
 export default setPos;
